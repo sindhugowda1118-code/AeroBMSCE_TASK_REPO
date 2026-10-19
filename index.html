@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102b3a">
+  <meta name="theme-color" content="#070a12">
   <meta name="description" content="Discover AeroBMSCE, the aerospace and aeromodelling club at BMS College of Engineering.">
   <title>AeroBMSCE — Build what takes flight</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,11 +18,33 @@
     <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="journey.html">Journey</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a><a class="nav-join" href="join.html">Join the team <span aria-hidden="true">↗</span></a></nav>
   </div></header>
   <main id="main">
-    <section class="home-hero" aria-labelledby="hero-title">
-      <div class="hero-photo" role="img" aria-label="AeroBMSCE students with their fixed-wing aircraft at a competition"></div>
-      <div class="hero-inner"><p class="hero-location">B.M.S. College of Engineering · Bengaluru</p><h1 id="hero-title">Build what<br>takes <em>flight.</em></h1><div class="hero-bottom"><p>Aircraft, unmanned systems and ideas made real by students who learn with their hands.</p><div class="hero-actions"><a class="button button-light" href="projects.html">Explore the work <span aria-hidden="true">↘</span></a><a class="text-link" href="join.html">Find your place <span aria-hidden="true">↗</span></a></div></div></div>
-      <div class="hero-index"><span>01</span><span class="hero-index-line" aria-hidden="true"></span><span>Design · Build · Fly</span></div>
+    <section class="home-hero cinematic-hero" aria-labelledby="hero-title">
+      <div class="cinematic-stage" aria-hidden="true">
+        <div class="hero-frame hero-frame-aircraft is-active"></div>
+        <div class="hero-frame hero-frame-uav"></div>
+        <div class="hero-frame hero-frame-team"></div>
+      </div>
+      <div class="hero-inner">
+        <p class="hero-location">AeroBMSCE / B.M.S. College of Engineering</p>
+        <h1 id="hero-title"><span data-hero-first>Build what</span><span><span data-hero-second>takes</span> <em data-hero-highlight>flight.</em></span></h1>
+        <div class="hero-bottom">
+          <p data-hero-description aria-live="polite">Aircraft, unmanned systems and ideas made real by students who learn with their hands.</p>
+          <div class="hero-actions"><a class="button button-light" href="projects.html">Explore the work <span aria-hidden="true">↗</span></a><a class="text-link" href="join.html">Find your place <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+      <div class="hero-meta"><span>EXPLORE THE WORK</span><strong data-hero-meta>Aircraft design</strong></div>
+      <div class="hero-pagination" role="group" aria-label="Featured AeroBMSCE disciplines">
+        <button type="button" data-hero-target="0" aria-label="Show aircraft design" aria-pressed="true"><span>01</span><b>Aircraft</b><i aria-hidden="true"></i></button>
+        <button type="button" data-hero-target="1" aria-label="Show unmanned systems" aria-pressed="false"><span>02</span><b>UAV systems</b><i aria-hidden="true"></i></button>
+        <button type="button" data-hero-target="2" aria-label="Show the student team" aria-pressed="false"><span>03</span><b>The team</b><i aria-hidden="true"></i></button>
+      </div>
     </section>
+    <nav class="discipline-strip" aria-label="Explore AeroBMSCE disciplines">
+      <a href="projects.html#aircraft-design"><span class="discipline-symbol" aria-hidden="true">✈</span><span>Aircraft design</span><b aria-hidden="true">↗</b></a>
+      <a href="projects.html#uav-systems"><span class="discipline-symbol" aria-hidden="true">⌖</span><span>Unmanned systems</span><b aria-hidden="true">↗</b></a>
+      <a href="projects.html#research-directions"><span class="discipline-symbol" aria-hidden="true">⌁</span><span>Autonomy &amp; research</span><b aria-hidden="true">↗</b></a>
+      <a href="about.html"><span class="discipline-symbol" aria-hidden="true">✳</span><span>Learn by making</span><b aria-hidden="true">↗</b></a>
+    </nav>
     <section class="home-intro section-pad">
       <div class="intro-heading"><p class="section-index">AeroBMSCE / Bengaluru, India</p><h2>Engineering gets<br>interesting <em>in the air.</em></h2></div>
       <div class="intro-body"><p>AeroBMSCE is the aerospace, aeromodelling and unmanned systems innovation club of B.M.S. College of Engineering. Here, ideas move from a first sketch into careful design, fabrication and flight testing.</p><a class="arrow-link" href="about.html">Meet the club <span aria-hidden="true">↗</span></a></div>

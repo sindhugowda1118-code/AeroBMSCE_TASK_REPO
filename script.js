@@ -31,6 +31,62 @@ if (menuButton && navigation) {
   });
 }
 
+const homeHero = document.querySelector(".home-hero");
+
+if (homeHero) {
+  const frames = [...homeHero.querySelectorAll(".hero-frame")];
+  const firstLine = homeHero.querySelector("[data-hero-first]");
+  const secondLine = homeHero.querySelector("[data-hero-second]");
+  const highlight = homeHero.querySelector("[data-hero-highlight]");
+  const description = homeHero.querySelector("[data-hero-description]");
+  const meta = homeHero.querySelector("[data-hero-meta]");
+  const slides = [
+    {
+      first: "Build what",
+      second: "takes",
+      highlight: "flight.",
+      description: "Aircraft, unmanned systems and ideas made real by students who learn with their hands.",
+      meta: "Aircraft design"
+    },
+    {
+      first: "Explore",
+      second: "UAV",
+      highlight: "systems.",
+      description: "Explore multirotor development, drone racing and autonomous-flight challenges.",
+      meta: "Unmanned systems"
+    },
+    {
+      first: "Made by",
+      second: "student",
+      highlight: "team.",
+      description: "Learn aerospace engineering through designing, making, testing and flying.",
+      meta: "The AeroBMSCE team"
+    }
+  ];
+
+  homeHero.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const control = event.target.closest("[data-hero-target]");
+    if (!(control instanceof HTMLButtonElement)) return;
+
+    const index = Number(control.dataset.heroTarget);
+    const slide = slides[index];
+    if (!slide || !frames[index] || !firstLine || !secondLine || !highlight || !description || !meta) return;
+
+    frames.forEach((frame, frameIndex) => {
+      frame.classList.toggle("is-active", frameIndex === index);
+    });
+    homeHero.querySelectorAll("[data-hero-target]").forEach((item, itemIndex) => {
+      item.setAttribute("aria-pressed", String(itemIndex === index));
+    });
+    firstLine.textContent = slide.first;
+    secondLine.textContent = slide.second;
+    highlight.textContent = slide.highlight;
+    description.textContent = slide.description;
+    meta.textContent = slide.meta;
+  });
+}
+
 const interestForm = document.querySelector("#interest-form");
 
 if (interestForm instanceof HTMLFormElement) {

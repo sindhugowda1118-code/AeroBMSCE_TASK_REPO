@@ -74,7 +74,7 @@ The starter pages used a fixed content width, inconsistent navigation, low-contr
 
 ### 2. What was the design route, and what UI/UX decisions were made?
 
-The visual direction carries forward the premium editorial aerospace identity already established in the redesign: deep navy, warm light surfaces, gold accents drawn from the AeroBMSCE mark, large typography and supplied team/aircraft imagery. The new information architecture gives the club, projects, journey, partners and contact distinct pages. The join experience uses a server-validated form and a persistent SQLite record rather than a browser-only success state. Shared navigation and relative page/asset paths keep the static pages compatible with a repository subpath.
+The visual direction adapts the supplied BMSCE PULSE reference into an aerospace context: warm ivory surfaces, ink-dark navigation, electric-blue calls to action, coral details, a lime flight accent, cinematic supplied photography and oversized editorial headings. A manually controlled, accessible homepage hero highlights aircraft, unmanned systems and the student team; shared navigation and page-specific heroes keep the same visual language throughout the site. The information architecture gives the club, projects, journey, partners and contact distinct pages. The join experience uses a server-validated form and a persistent SQLite record rather than a browser-only success state. Relative page and asset paths keep the static pages compatible with a repository subpath.
 
 ### 3. Describe one problem or edge case encountered, how it appeared, and the steps taken to work around it.
 
