@@ -1,0 +1,15 @@
+services:
+  aerobmsce:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      AEROBMSCE_DB_PATH: /data/aerobmsce.sqlite3
+    volumes:
+      - aerobmsce-data:/data
+    restart: unless-stopped
+
+volumes:
+  aerobmsce-data:

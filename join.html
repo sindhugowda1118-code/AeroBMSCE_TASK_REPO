@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3a">
+  <meta name="description" content="Register your interest in learning and building with AeroBMSCE.">
+  <title>Join the team — AeroBMSCE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-note">A student-built project website · Not the official AeroBMSCE website</div>
+  <header class="site-header"><div class="header-inner">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="AeroBMSCE home"><img src="images/header-logo.png" alt="AeroBMSCE"></a><span class="brand-divider" aria-hidden="true"></span><a class="college-mark" href="https://bmsce.ac.in/" aria-label="B.M.S. College of Engineering website"><img src="images/bmsce-logo.jpg" alt="B.M.S. College of Engineering"></a></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="journey.html">Journey</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a><a class="nav-join" href="join.html" aria-current="page">Join the team <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-hero join-hero" aria-labelledby="page-title"><div class="page-hero-image" role="img" aria-label="AeroBMSCE team working on student aircraft"></div><div class="page-hero-content"><h1 id="page-title">Your next idea<br>could <em>take flight.</em></h1><p>Tell the club a little about yourself and what you’d like to explore.</p></div></section>
+    <section class="registration-section section-pad"><div class="registration-aside"><h2>Start with<br>a <em>conversation.</em></h2><p>This form stores an interest request for the club to review. It is not an account, does not confirm membership and is not an admissions form. No automatic email or confirmation is sent.</p><p>Only the fields shown are stored. Use an email address you can access.</p><a class="arrow-link" href="mailto:aerobmsce@bmsce.ac.in">Prefer email? Contact the club <span aria-hidden="true">↗</span></a></div>
+      <form class="interest-form" id="interest-form" action="api/interest" method="post">
+        <div class="form-heading"><h2>Register your interest</h2><p>All fields are required.</p></div>
+        <label for="full-name">Full name</label><input id="full-name" name="fullName" autocomplete="name" maxlength="100" required>
+        <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <label for="department">Department</label><input id="department" name="department" autocomplete="organization-title" maxlength="100" required>
+        <div class="form-row"><div><label for="study-year">Year of study</label><select id="study-year" name="studyYear" required><option value="">Select your year</option><option value="1">1st year</option><option value="2">2nd year</option><option value="3">3rd year</option><option value="4">4th year</option><option value="graduate">Graduate</option><option value="other">Other</option></select></div>
+        <div><label for="interest">Area of interest</label><select id="interest" name="interest" required><option value="">Choose an area</option><option value="aircraft-design">Aircraft design</option><option value="uav-systems">UAV systems</option><option value="autonomy">Autonomy</option><option value="fabrication">Fabrication</option><option value="research">Research</option><option value="partnership">Partnership</option></select></div></div>
+        <label class="consent-label"><input type="checkbox" name="consent" required><span>I agree that AeroBMSCE may use these details to respond to this enquiry.</span></label>
+        <button class="button button-dark submit-button" type="submit">Send interest request <span aria-hidden="true">↗</span></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="form-privacy">Your request is stored in the site’s SQLite database. Do not use this form for sensitive information.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="index.html"><img src="images/header-logo.png" alt="AeroBMSCE"></a><p>Above gravity. Beyond limits.</p><nav aria-label="Footer navigation"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="journey.html">Journey</a><a href="partners.html">Partners</a><a href="join.html">Join</a><a href="contact.html">Contact</a></nav><small>Student-built project website · <a href="https://bmsce.ac.in/" rel="noopener">BMS College of Engineering</a></small></footer>
+</body>
+</html>
