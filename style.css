@@ -19,7 +19,7 @@
 body { margin: 0; color: var(--ink); background: var(--white); font-size: 16px; line-height: 1.65; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus-ring, var(--gold)); outline-offset: 4px; }
 .section-pad { padding: clamp(82px, 10vw, 138px) var(--gutter); }
 .site-note { padding: 6px var(--gutter); color: #d1dce1; background: #091923; text-align: center; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 .skip-link { position: fixed; z-index: 50; top: 8px; left: 8px; padding: 10px 14px; color: var(--navy); background: white; transform: translateY(-160%); }
@@ -488,6 +488,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   --line: #d3d1c8;
   --gold: #c8ff45;
   --pulse-blue: #315cff;
+  --focus-ring: #234bd6;
   --pulse-coral: #ff5a47;
   color-scheme: light;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -505,12 +506,12 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
 .college-mark img { padding: 4px 6px; background: #fff; }
 .main-nav { gap: clamp(12px, 1.5vw, 22px); }
 .main-nav a { color: #283243; font-size: 10px; font-weight: 700; letter-spacing: .065em; text-transform: uppercase; }
-.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--pulse-blue); }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--focus-ring); }
 .main-nav .nav-join { padding: 12px 16px; border-color: var(--pulse-blue); color: #fff; background: var(--pulse-blue); }
 .main-nav .nav-join:hover { color: var(--ink); background: var(--gold); border-color: var(--gold); }
 .main-nav .nav-join span { color: inherit; }
 .menu-toggle { border-color: #11182755; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.menu-toggle:hover { border-color: var(--pulse-blue); color: var(--pulse-blue); }
+.menu-toggle:hover { border-color: var(--focus-ring); color: var(--focus-ring); }
 
 .home-hero { min-height: 700px; min-height: min(850px, calc(100svh - 100px)); }
 .cinematic-hero { position: relative; isolation: isolate; background: #090d19; }
@@ -563,8 +564,8 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
 .home-intro, .page-intro, .project-method, .timeline-section, .contact-page, .registration-section, .partner-ecosystem { background: var(--paper); }
 .home-journey, .vision-section { background: var(--white); }
 .intro-heading h2, .home-journey h2, .feature-copy h2, .page-title-block h2, .about-visual h2, .project-method h2, .partner-ecosystem h2, .contact-page h2, .registration-aside h2, .join-ribbon h2, .section-heading-row h2 { text-transform: uppercase; text-wrap: balance; }
-.intro-heading h2 em, .home-journey h2 em, .home-cta h2 em, .page-title-block h2 em { color: var(--pulse-blue); }
-.section-index { color: var(--pulse-blue); font-size: 9px; letter-spacing: .13em; }
+.intro-heading h2 em, .home-journey h2 em, .home-cta h2 em, .page-title-block h2 em { color: var(--focus-ring); }
+.section-index { color: var(--focus-ring); font-size: 9px; letter-spacing: .13em; }
 .feature-copy { background: #11182a; }
 .feature-copy .section-index { color: var(--gold); }
 .feature-copy h2 { color: #fff; text-transform: uppercase; }
@@ -587,7 +588,7 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
 .project-story-copy .project-icon { background: var(--pulse-blue); }
 .project-story:hover > img:first-child { filter: saturate(1); }
 .timeline-item { border-color: #c2c1b8; }
-.timeline-year { color: var(--pulse-blue); }
+.timeline-year { color: var(--focus-ring); }
 .timeline-item h2, .timeline-item h3 { text-transform: uppercase; }
 .timeline-disclaimer { background: var(--paper); }
 .partner-option { transition: background-color .2s ease; }
@@ -596,9 +597,9 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
 .partner-option > img { background: var(--pulse-blue); }
 .partner-ecosystem h2 { color: var(--ink); }
 .contact-card { border-color: #b5b9c4; }
-.contact-card > p { color: var(--pulse-blue); }
-.contact-card > a:not(.arrow-link) span, .contact-card .arrow-link span { color: var(--pulse-blue); }
-.registration-aside h2 em { color: var(--pulse-blue); font-style: normal; }
+.contact-card > p { color: var(--focus-ring); }
+.contact-card > a:not(.arrow-link) span, .contact-card .arrow-link span { color: var(--focus-ring); }
+.registration-aside h2 em { color: var(--focus-ring); font-style: normal; }
 .interest-form { border-color: #c7c9c7; background: #faf9f3; box-shadow: 0 18px 45px #11182712; }
 .interest-form input:focus, .interest-form select:focus { border-color: var(--pulse-blue); outline-color: var(--pulse-blue); }
 .consent-label input { accent-color: var(--pulse-blue); }
